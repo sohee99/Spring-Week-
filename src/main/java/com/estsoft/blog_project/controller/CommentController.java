@@ -23,7 +23,7 @@ public class CommentController {
     // ArticleRepository 주입
     private BlogRepository blogRepository;
 
-    //하나의 게시글에 대한 대슥르 리스트 조회
+    //하나의 게시글에 대한 댓글 리스트 조회
     @GetMapping("/comments/{articleId}")
     public ResponseEntity<List<CommentResponse>> showCommentsByArticleId(@PathVariable Long articleId) {
         List<Comment> comments = commentRepository.findByArticle_Id(articleId);
